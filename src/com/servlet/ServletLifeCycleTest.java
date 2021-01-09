@@ -11,7 +11,7 @@ public class ServletLifeCycleTest implements Servlet {
     }
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println("ServletLifeCycleTest  init execute");
+        System.out.println("ServletLifeCycleTest  init execute ");
     }
 
 
