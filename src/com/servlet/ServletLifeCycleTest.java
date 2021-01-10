@@ -1,5 +1,7 @@
 package com.servlet;
 
+import com.entity.Company;
+
 import javax.servlet.*;
 import java.io.IOException;
 import java.util.Enumeration;
@@ -37,6 +39,11 @@ public class ServletLifeCycleTest implements Servlet {
         //获取文件真实路径
         String realPath = application.getRealPath("/index.html");
         System.out.println("path = "+realPath);
+
+
+        Company company = new Company("AliBaba","Jack Ma");
+        //向ServletContext放入company
+        application.setAttribute("company",company);
     }
 
 
