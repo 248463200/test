@@ -14,6 +14,7 @@
         <param-value>23</param-value>
     </context-param>
 
+    <!--servlet1-->
     <servlet>
         <servlet-name>ServletLifeCycleTest</servlet-name>
         <servlet-class>com.servlet.ServletLifeCycleTest</servlet-class>
@@ -22,8 +23,6 @@
         <servlet-name>ServletLifeCycleTest</servlet-name>
         <url-pattern>/LifeCycleTest</url-pattern>
     </servlet-mapping>
-
-
     <servlet>
         <servlet-name>ServletB</servlet-name>
         <servlet-class>com.servlet.ServletB</servlet-class>
@@ -34,7 +33,7 @@
     </servlet-mapping>
 
 
-
+    <!--servlet2-->
     <servlet>
         <servlet-name>GenericServlet</servlet-name>
         <servlet-class>com.servlet2.WelcomeServlet</servlet-class>
@@ -52,6 +51,16 @@
         <url-pattern>/genericservlet2</url-pattern>
     </servlet-mapping>
 
+
+    <!--servlet3-->
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>com.servlet3.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/system/login</url-pattern>
+    </servlet-mapping>
 
     <!--1.欢迎页面，优先访问上面的，资源不存在再访问下面，路径不需要以“/”开头
         2.不一定非是页面，也可以是Servlet输出页面
