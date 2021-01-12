@@ -62,11 +62,31 @@
         <url-pattern>/system/login</url-pattern>
     </servlet-mapping>
 
+    <!--servlet4-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.servlet4.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/system/login2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.servlet4.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/system/logout</url-pattern>
+    </servlet-mapping>
+
+
     <!--1.欢迎页面，优先访问上面的，资源不存在再访问下面，路径不需要以“/”开头
         2.不一定非是页面，也可以是Servlet输出页面
         3.不设置默认访问index ,tomcat中设置了<welcome-file-list/>(index.html;index/html;index.jsp)
     -->
     <welcome-file-list>
+        <welcome-file>login2.html</welcome-file>
         <welcome-file>login.html</welcome-file>
         <welcome-file>index.html</welcome-file>
         <!-- <welcome-file>ServletB</welcome-file>-->
