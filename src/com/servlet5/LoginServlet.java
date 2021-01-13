@@ -15,4 +15,11 @@ public class LoginServlet extends HttpServlet {
         request.setAttribute("user",user);
         request.getRequestDispatcher("/system/welcome5").forward(request,response);
     }
+
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        User user = new User(2,"李四");
+        request.setAttribute("user",user);
+        response.sendRedirect(request.getContextPath()+"/success.html");
+    }
 }

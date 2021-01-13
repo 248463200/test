@@ -14,7 +14,13 @@ package servlet4:
     这里还是实现一个demo,真正使用javax.servlet.http.HttpServlet
 
 package servlet5:
-    RequestDispatcher
+    转发和重定向
+    转发：request.getRequestDispatcher("/system/welcome5").forward(request,response);
+    重定向：response.sendRedirect(request.getContextPath()+"/success.html");
+    区别：转发是一次请求，重定向是两次
+         重定向需要加根目录
+         重定向可以跨APP跳转
+
 
 package template:
     发现HttpServlet是一种典型模板设计模式，实现一下这种编程思想
